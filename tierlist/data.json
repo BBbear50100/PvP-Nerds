@@ -95,7 +95,9 @@
   {
    "id": "gz82cyd",
    "name": "DumbPotatoNerd",
-   "tiers": {},
+   "tiers": {
+    "spear": "HT1"
+   },
    "region": ""
   },
   {
@@ -144,6 +146,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792643674687,
+   "n": "DumbPotatoNerd",
+   "m": "spear",
+   "a": "LT3",
+   "b": "HT1",
+   "by": "Manager"
+  },
   {
    "d": 1792643661082,
    "n": "eclipsing1",
