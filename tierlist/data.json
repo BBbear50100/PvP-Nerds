@@ -131,9 +131,20 @@
   {
    "id": "0a8fkji",
    "name": "_Rocketravy_",
-   "tiers": {},
+   "tiers": {
+    "spear": "MT1"
+   },
    "region": ""
   }
  ],
- "log": []
+ "log": [
+  {
+   "d": 1792643631523,
+   "n": "_Rocketravy_",
+   "m": "spear",
+   "a": "LT3",
+   "b": "MT1",
+   "by": "Manager"
+  }
+ ]
 }
