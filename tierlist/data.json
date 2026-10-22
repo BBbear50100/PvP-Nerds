@@ -43,6 +43,67 @@
    "icon": "https://assets.mcasset.cloud/26.3/assets/minecraft/textures/item/tnt_minecart.png?height=40"
   }
  ],
- "players": [],
+ "players": [
+  {
+   "id": "r5ic7tg",
+   "name": "bblixible",
+   "tiers": {},
+   "region": ""
+  },
+  {
+   "id": "uedy10m",
+   "name": "VTShadowForcast",
+   "tiers": {},
+   "region": ""
+  },
+  {
+   "id": "0tl91a7",
+   "name": "BBearMC_",
+   "tiers": {},
+   "region": ""
+  },
+  {
+   "id": "c0z3nbg",
+   "name": "Itszrex",
+   "tiers": {},
+   "region": ""
+  },
+  {
+   "id": "dri31am",
+   "name": "kern11",
+   "tiers": {},
+   "region": ""
+  },
+  {
+   "id": "9orfi9z",
+   "name": "domdemkingsi",
+   "tiers": {},
+   "region": ""
+  },
+  {
+   "id": "6fbhgh4",
+   "name": "eclipsing1",
+   "tiers": {},
+   "region": ""
+  },
+  {
+   "id": "gz82cyd",
+   "name": "DumbPotatoNerd",
+   "tiers": {},
+   "region": ""
+  },
+  {
+   "id": "ktees6r",
+   "name": "goofyguy3739",
+   "tiers": {},
+   "region": ""
+  },
+  {
+   "id": "k12ctpr",
+   "name": "saphx_",
+   "tiers": {},
+   "region": ""
+  }
+ ],
  "log": []
 }
