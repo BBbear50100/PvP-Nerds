@@ -97,7 +97,7 @@
    "name": "DumbPotatoNerd",
    "tiers": {
     "spear": "HT1",
-    "pot": "HT1"
+    "pot": "LT3"
    },
    "region": ""
   },
@@ -147,6 +147,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792643682816,
+   "n": "DumbPotatoNerd",
+   "m": "pot",
+   "a": "HT1",
+   "b": "LT3",
+   "by": "Manager"
+  },
   {
    "d": 1792643680590,
    "n": "DumbPotatoNerd",
