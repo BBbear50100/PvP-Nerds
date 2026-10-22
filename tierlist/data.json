@@ -59,7 +59,9 @@
   {
    "id": "0tl91a7",
    "name": "BBearMC_",
-   "tiers": {},
+   "tiers": {
+    "crystal": "HT1"
+   },
    "region": ""
   },
   {
@@ -138,6 +140,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792643641682,
+   "n": "BBearMC_",
+   "m": "crystal",
+   "a": "LT3",
+   "b": "HT1",
+   "by": "Manager"
+  },
   {
    "d": 1792643631523,
    "n": "_Rocketravy_",
