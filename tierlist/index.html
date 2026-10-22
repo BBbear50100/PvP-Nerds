@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PvP Nerd Tiers</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏆</text></svg>">
+<style>
+:root{color-scheme:dark;--bg:#080b14;--pan:#111729;--row:#141b30;--hov:#1b2440;--line:#222c48;--ink:#eef1fb;--mute:#8791b0;--acc:#ffc24a}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(900px 520px at 12% -6%,#1d2a5a77,transparent),radial-gradient(800px 520px at 92% 0,#5a1d6a44,transparent),var(--bg);background-attachment:fixed;color:var(--ink);font:15px/1.45 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+button,input,select,textarea{font:inherit;color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0);z-index:8;background:#080b14b8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{max-width:1280px;margin:auto;padding:12px 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.logo{font-weight:900;font-size:22px;letter-spacing:.06em;cursor:pointer;text-transform:uppercase}.logo i{font-style:normal;margin-right:6px}.lt{background:linear-gradient(90deg,#ffd76a,#ff8a3d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sp{flex:1}
+.btn{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--pan);padding:8px 15px;border-radius:11px;cursor:pointer;font-weight:600;transition:.15s}
+.btn:hover{background:var(--hov);transform:translateY(-1px)}.btn:active{transform:scale(.95)}
+.btn.p{background:linear-gradient(135deg,#ffc24a,#ff8a3d);color:#2a1500;border:0;box-shadow:0 6px 20px #ff8a3d33}.btn.d{color:#ff6b6b}.btn.s{padding:5px 11px;font-size:13px}
+input,select,textarea{background:#0a0f1d;border:1px solid var(--line);border-radius:10px;padding:9px 12px;width:100%;transition:.2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px #ffc24a30}
+#q{max-width:230px}select{width:auto;padding:6px 8px}
+main{max-width:1280px;margin:auto;padding:14px 20px 60px}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:4px 0 22px;padding:4px 2px 8px}
+.tab{flex:1 1 0;min-width:86px;border:0;background:transparent;color:var(--mute);padding:8px 6px 12px;cursor:pointer;display:grid;justify-items:center;gap:6px;font-weight:700;font-size:13px;position:relative;transition:color .25s}
+.tab i{font-style:normal;font-size:34px;height:38px;display:grid;place-items:center;filter:grayscale(.85) brightness(.75);transition:.25s}
+.tab::after{content:'';position:absolute;left:18%;right:18%;bottom:0;height:3px;border-radius:3px;background:linear-gradient(90deg,#ffd76a,#ff8a3d);transform:scaleX(0);transition:.25s}
+.tab:hover{color:var(--ink)}.tab:hover i{filter:none;transform:translateY(-5px) scale(1.22) rotate(-8deg)}.tab.pop i{animation:ipop .6s cubic-bezier(.3,1.6,.5,1)}.tab.on{color:var(--ink)}.tab.on i{filter:drop-shadow(0 0 10px #ffc24a88);transform:translateY(-2px) scale(1.1)}.tab.on::after{transform:scaleX(1)}
+.tab.add{flex:0 0 56px;min-width:56px}.tab.add i{font-size:28px;color:var(--acc);filter:none}
+.top{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:16px}.top h1{margin:0;font-size:28px;letter-spacing:-.01em}.mute{color:var(--mute);font-size:13px}
+.sec{margin:22px 4px 10px;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:12px}.sec::after{content:'';flex:1;height:1px;background:var(--line)}
+.rw{position:relative;display:flex;align-items:center;gap:18px;min-height:96px;margin-bottom:10px;border-radius:18px;background:linear-gradient(90deg,#161d35,#0f1426);border:1px solid var(--line);cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s;--rc:#2c3760;padding-right:18px}
+.rw:hover{transform:translateY(-2px);border-color:#3a4a7c;box-shadow:0 10px 30px #0008;z-index:2}
+.rb{align-self:stretch;flex:0 0 92px;display:grid;place-items:center;font-size:30px;font-weight:900;background:#1b2340;color:#7581a8;border-radius:18px 0 0 18px;clip-path:polygon(0 0,100% 0,74% 100%,0 100%);padding-right:16px}
+.r1{--rc:#ffc93c;border-color:#c9a02e55;box-shadow:0 0 36px #ffc24a14}.r1 .rb{background:linear-gradient(135deg,#ffd45e,#c48a10);color:#3b2700}
+.r2{--rc:#cfdcf0;border-color:#9fb4d044}.r2 .rb{background:linear-gradient(135deg,#dbe6f6,#8fa3bf);color:#1c2a3d}
+.r3{--rc:#f0a063;border-color:#d1814244}.r3 .rb{background:linear-gradient(135deg,#f4aa6e,#b4622a);color:#3a1d08}
+.av,.pav{width:66px;height:66px;border-radius:50%;border:3px solid var(--rc);background:#0009;image-rendering:pixelated;flex:0 0 auto;box-shadow:0 0 18px color-mix(in srgb,var(--rc) 35%,transparent)}
+.nmb{min-width:0;flex:1}.nm{font-size:21px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.sub{font-size:13px;font-weight:700}
+.rgw{width:130px;text-align:center}
+.rgb{display:inline-block;padding:4px 13px;border-radius:99px;font-weight:800;font-size:12px;letter-spacing:.06em;background:hsl(var(--h,220) 70% 50%/.16);color:hsl(var(--h,220) 90% 70%);border:1px solid hsl(var(--h,220) 70% 55%/.35)}.rgb.no{opacity:.45}
+.tiles{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.tl{position:relative;width:56px;height:64px;border-radius:12px;background:#0a0f1d;border:1px solid #ffffff12;border-bottom:3px solid var(--c);display:grid;place-content:center;justify-items:center;gap:3px;transition:.2s}
+.tl i{display:inline-block;transition:transform .3s;font-style:normal;font-size:24px;line-height:1}.tl:hover i{transform:translateY(-2px) scale(1.25) rotate(-8deg)}.tl b{font-size:12px;color:var(--c)}
+.tl:hover{transform:translateY(-4px);box-shadow:0 8px 22px color-mix(in srgb,var(--c) 35%,transparent);z-index:9}
+.tl.lg{width:88px;height:78px}.tl.lg i{font-size:32px}.tl.lg b{font-size:16px}
+.tl::after{content:attr(data-tip);position:absolute;bottom:118%;left:50%;transform:translateX(-50%) scale(.92);background:#04060d;border:1px solid var(--line);padding:5px 10px;border-radius:9px;white-space:nowrap;font-size:12px;font-weight:600;color:var(--ink);opacity:0;pointer-events:none;transition:.15s}
+.tl:hover::after{opacity:1;transform:translateX(-50%) scale(1)}
+.bd{font-size:12px;font-weight:800;padding:2px 9px;border-radius:99px;background:color-mix(in srgb,var(--c) 20%,transparent);color:var(--c)}
+.empty{padding:34px;text-align:center;color:var(--mute);background:var(--row);border-radius:16px}
+.panel{background:#111729cc;border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:26px}
+.log{display:grid;gap:6px;margin-top:10px;font-size:14px}.log div{padding:7px 11px;background:var(--row);border-radius:9px}
+.ov{position:fixed;inset:0;background:#03050bcc;backdrop-filter:blur(4px);display:grid;place-items:center;padding:16px;z-index:20;overflow:auto;animation:fin .2s}
+.modal{background:linear-gradient(#131a2f,#0e1324);border:1px solid var(--line);border-radius:22px;padding:22px;width:min(520px,100%);display:grid;gap:14px;animation:zoom .3s cubic-bezier(.2,.8,.2,1);box-shadow:0 30px 80px #000a}.modal.wide{width:min(760px,100%)}
+.ov.out{animation:fout .18s forwards}.ov.out .modal{animation:zout .18s forwards}
+.modal label{font-size:13px;font-weight:600;display:grid;gap:5px}.modal h2,.modal h3{margin:0}
+.ban{position:relative;display:flex;gap:20px;align-items:center;padding:22px;border-radius:18px;overflow:hidden;background:linear-gradient(120deg,color-mix(in srgb,var(--c) 32%,#0b1020),#0b1020 72%);border:1px solid color-mix(in srgb,var(--c) 40%,transparent)}
+.ban::before{content:'';position:absolute;width:260px;height:260px;right:-60px;top:-90px;border-radius:50%;background:radial-gradient(color-mix(in srgb,var(--c) 40%,transparent),transparent 70%)}
+.pav{width:96px;height:96px;--rc:var(--c);animation:pop .5s cubic-bezier(.3,1.5,.5,1)}.pi{position:relative;z-index:1;min-width:0}.pi h2{font-size:30px;overflow-wrap:anywhere}.rkt{font-weight:800;margin:2px 0 8px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.chip{background:#ffffff14;border-radius:99px;padding:4px 12px;font-size:13px}.chip b{color:var(--acc)}
+.body{position:absolute;right:18px;bottom:-30px;height:190px;filter:drop-shadow(0 12px 24px #000a);animation:up .5s .1s backwards}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.mc{display:grid;justify-items:center;gap:4px;padding:14px 8px;border-radius:16px;background:linear-gradient(#171f38,#10162a);border:1px solid #ffffff10;border-bottom:3px solid var(--c);animation:up .4s backwards;animation-delay:calc(var(--i,0)*45ms);transition:.2s}
+.mc:hover{transform:translateY(-3px);box-shadow:0 10px 26px color-mix(in srgb,var(--c) 28%,transparent)}.noanim .mc,.noanim .pav,.noanim .body{animation:none}
+.mi2{font-size:30px;line-height:1}.mn{font-size:13px;color:var(--mute);font-weight:600;text-align:center}.tt{font-size:20px;color:var(--c)}.pp{font-size:12px;color:var(--mute)}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.ti{display:grid;gap:6px;font-size:14px}.ti div{background:var(--row);border-radius:9px;padding:7px 11px}.ti b+b,.ti .bd+b{margin:0 6px}
+.mrow{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.mrow input{flex:1;min-width:110px}.mic{font-size:24px;width:34px;text-align:center}.up{cursor:pointer;display:inline-block}
+.ic{width:1em;height:1em;object-fit:contain;vertical-align:-.12em;image-rendering:pixelated}
+.enter .rw{animation:slideIn .5s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i,0)*35ms + .08s)}.enter .top{animation:slideIn .45s cubic-bezier(.2,.8,.2,1) backwards}.enter .sec{animation:slideIn .5s backwards}.enter .top h1 .ic{display:inline-block;animation:ipop .6s .1s cubic-bezier(.3,1.6,.5,1) backwards}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:30;width:max-content;max-width:92vw}.t{background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:12px;text-align:center;animation:up .3s}
+@keyframes slideIn{from{opacity:0;transform:translateX(calc(var(--dx,1)*46px))}}@keyframes ipop{from{opacity:0;transform:scale(.3) rotate(-35deg)}}
+@keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}@keyframes fin{from{opacity:0}}@keyframes fout{to{opacity:0}}@keyframes pop{from{opacity:0;transform:scale(.4)}}
+@keyframes zoom{from{opacity:0;transform:translateY(14px) scale(.96)}}@keyframes zout{to{opacity:0;transform:scale(.95)}}
+@media (max-width:900px){.rw{flex-wrap:wrap;padding:0 14px 14px 0}.tiles{width:100%;justify-content:flex-start;padding-left:14px}.rgw{display:none}.rb{flex-basis:70px}.body{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+.emb .logo,.emb #lg{display:none}
+html.emb{--bg:#080b14;--card:#111729;--ink:#eef1fb;--mute:#8791b0;--line:#222c48;--shadow:0 8px 30px rgba(0,0,0,.4)}
+html.emb body{background:radial-gradient(900px 520px at 12% -6%,#1d2a5a77,transparent),radial-gradient(800px 520px at 92% 0,#5a1d6a44,transparent),#080b14;background-attachment:fixed}
+
+</style><script src="../px.js"></script></head><body>
+<header><div class="bar"><div class="logo" id="logo" onclick="go('overall')"></div><div class="sp"></div>
+<input id="q" placeholder="Search player…" oninput="q=this.value;bd()"><button class="btn" id="set" hidden onclick="settings()">⚙</button><button class="btn" id="lg"></button></div></header>
+<main><nav class="tabs" id="tabs"></nav><div id="app"><div class="mute" style="padding:40px;text-align:center">Loading…</div></div></main>
+<div id="modal"></div><div id="toast"></div>
+<script>
+const NS=(location.pathname.split('/')[1]||'root')+':';
+const DP=(a=>a.slice(2,-1).length?a.slice(2,-1).join('/')+'/data.json':'data.json')(location.pathname.split('/'));
+if(top!==self)document.documentElement.classList.add('emb');
+const DEF=[['crystal','Crystal','🔮'],['mace','Mace','🔨'],['spear','Spear Mace','🔱'],['pot','Netherite Pot','🧪'],['dsmp','Diamond SMP','💎'],['uhc','UHC','❤️'],['smp','SMP','🌍'],['cart','Cart','🚃']].map(([id,name,icon])=>({id,name,icon}));
+const TIERS=['LT3','MT3','HT3','LT2','MT2','HT2','LT1','MT1','HT1'],PTS=[1,2,4,7,10,14,19,25,32];
+const TC={LT3:'#c4621a',MT3:'#f28c28',HT3:'#ffb04d',LT2:'#2b5fd1',MT2:'#3b82f6',HT2:'#6fb3ff',LT1:'#16883f',MT1:'#22c55e',HT1:'#62f09a'};
+const INFO=[['HT1','Peak execution; top-tier mastery.'],['MT1','High-level play; highly consistent.'],['LT1','Consistently executes all tactics.'],['HT2','Knows all tactics; inconsistent execution.'],['MT2','Knows most tactics; lacks consistency.'],['LT2','Knows half the tactics; basic consistency.'],['HT3','Knows half the tactics; inconsistent.'],['MT3','Executes basic tactics only.'],['LT3','Default tier; beginner or unranked.']];
+const RANKS=[[256,'Combat Grandmaster','#ff5d73'],[100,'Combat Master','#ffc24a'],[50,'Combat Novice','#6fb3ff'],[20,'Combat Trainee','#5eed95'],[8,'Combat Rookie','#b9c2da']];
+const REG=['NA WEST','NA EAST','NA CENTRAL','EU','ASIA'],HUE=[350,205,160,45,285];
+const HASH={m:'045ccce2d15921dcae41ff5acfbce0e097e4642579f570596694b5e5032db250'};
+let D={mgr:HASH.m,title:'PvP Nerd Tiers',modes:DEF.map(m=>({...m})),players:[],log:[]},role=(top!==self?sessionStorage[NS+'sm']==='1':sessionStorage[NS+'role']==='m')?'m':'',dm=[],tab='overall',q='',fx=true,timer,chain=Promise.resolve(),tt;
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const sha=async s=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(b=>b.toString(16).padStart(2,'0')).join('');
+const isM=()=>role==='m',isS=isM,who=()=>'Manager',ic=m=>/^(data:|https?:)/.test(m.icon)?`<img class="ic" src="${esc(m.icon)}" alt="">`:esc(m.icon);
+const tr=(p,m)=>(p.tiers&&p.tiers[m])||'LT3',tn=t=>+t[2],badge=t=>`<b class="bd" style="--c:${TC[t]}">${t}</b>`,tp=t=>PTS[TIERS.indexOf(t)];
+const av=(n,c='')=>`<img class="${c}" loading="lazy" alt="" src="https://mc-heads.net/avatar/${encodeURIComponent(n)}/96" onerror="this.style.visibility='hidden'">`;
+const pts=p=>D.modes.reduce((s,m)=>s+tp(tr(p,m.id)),0),rk=n=>{const r=RANKS.find(x=>n>=x[0]);return r?{t:r[1],c:r[2]}:{t:'Unranked',c:'#7a84a3'}};
+const sorted=()=>[...D.players].sort((a,b)=>pts(b)-pts(a)||a.name.localeCompare(b.name));
+const rg=p=>`<span class="rgb${p.region?'':' no'}" style="--h:${HUE[REG.indexOf(p.region)]??220}">${esc(p.region||'—')}</span>`;
+function toast(m,ms=3500){$('#toast').innerHTML='<div class="t">'+esc(m)+'</div>';clearTimeout(tt);tt=setTimeout(()=>$('#toast').innerHTML='',ms)}
+function repo(){if(localStorage[NS+'repo'])return localStorage[NS+'repo'];const h=location.hostname;if(!h.endsWith('github.io'))return'';let s=location.pathname.split('/')[1];if(!s||s.endsWith('.html'))s=h;return h.split('.')[0]+'/'+s}
+async function load(){let d=null;const r=repo();
+ if(r){try{const x=await fetch(`https://api.github.com/repos/${r}/contents/${DP}`,{headers:{Accept:'application/vnd.github.raw+json'},cache:'no-store'});if(x.ok)d=await x.json()}catch(e){}}
+ if(!d){try{d=await(await fetch('data.json?'+Date.now())).json()}catch(e){}}
+ if(d)D={mgr:d.mgr||HASH.m,title:d.title||'PvP Nerd Tiers',modes:d.modes&&d.modes.length?d.modes:DEF.map(m=>({...m})),players:d.players||[],log:d.log||[]}}
+function save(){render();clearTimeout(timer);timer=setTimeout(()=>{chain=chain.then(push)},1000)}
+async function push(){const tk=(localStorage[NS+'tk']||'').replace(/^(bearer|token)\s+/i,'').replace(/[\s"']/g,''),r=(repo()||'').trim();
+ if(!tk||!r){toast('Add your GitHub token in ⚙ Settings to publish changes',6000);return false}
+ const u=`https://api.github.com/repos/${r}/contents/${DP}`,h={Authorization:'Bearer '+tk,Accept:'application/vnd.github+json'};
+ const why=async x=>{let m='';try{m=(await x.json()).message||''}catch(e){}const c=x.status;return c===401?'Token rejected (401). Expired or copied wrong.':c===403||c===404?`GitHub refused (${c}${m?': '+m:''}). Check the repo is "${r}" and the token has Contents: Read and write.`:`GitHub could not save (${c}${m?': '+m:''})`};
+ try{for(let a=0;a<3;a++){const g=await fetch(u+'?t='+Date.now(),{headers:h,cache:'no-store'});
+  if(!g.ok&&g.status!==404){toast(await why(g),9000);return false}
+  const j=g.ok?await g.json():null,body={message:'Update tier list',content:btoa(unescape(encodeURIComponent(JSON.stringify(D,null,1))))};if(j&&j.sha)body.sha=j.sha;
+  const p=await fetch(u,{method:'PUT',headers:h,body:JSON.stringify(body)});
+  if(p.ok){toast('Saved ✓');return true}
+  if((p.status===422||p.status===409)&&a<2){await new Promise(z=>setTimeout(z,700));continue}
+  toast(await why(p),10000);return false}}catch(e){toast('Network error: '+e.message,9000);return false}}
+/* views */
+function go(t){const ids=['overall',...D.modes.map(m=>m.id)];$('#app').style.setProperty('--dx',ids.indexOf(t)>=ids.indexOf(tab)?1:-1);tab=t;fx=true;render();scrollTo({top:0})}
+const tile=(p,x,lg)=>{const t=tr(p,x.id);return `<div class="tl${lg?' lg':''}" style="--c:${TC[t]}" data-tip="${esc(x.name)}: ${t} · ${tp(t)} pts"><i>${ic(x)}</i><b>${t}</b></div>`};
+function rw(p,i,m){const r=rk(pts(p));return `<div class="rw r${i+1}" style="--i:${Math.min(i,24)}" onclick="prof('${p.id}')"><div class="rb">${i+1}</div>${av(p.name,'av')}<div class="nmb"><div class="nm">${esc(p.name)}</div><div class="sub" style="color:${r.c}">${r.t}</div></div><div class="rgw">${rg(p)}</div><div class="tiles">${(m?[m]:D.modes).map(x=>tile(p,x,!!m)).join('')}</div></div>`}
+const head=(t,s)=>`<div class="top"><div><h1>${t}</h1><div class="mute">${s}</div></div><div class="sp"></div><button class="btn s" onclick="info()">ⓘ Information</button></div>`;
+function bd(){const f=q.trim().toLowerCase(),m=D.modes.find(x=>x.id===tab),ok=p=>!f||p.name.toLowerCase().includes(f);let h,l;
+ if(m){const k=m.id;l=[...D.players].sort((a,b)=>TIERS.indexOf(tr(b,k))-TIERS.indexOf(tr(a,k))||pts(b)-pts(a)||a.name.localeCompare(b.name));h=head(`${ic(m)} ${esc(m.name)} Tier List`,`${l.length} players`)}
+ else{l=sorted();h=head('🏆 Overall Rankings','Ranked by total points across every gamemode')}
+ let last=0,b='';l.forEach((p,i)=>{if(!ok(p))return;if(m){const n=tn(tr(p,m.id));if(n!==last){last=n;b+=`<div class="sec">Tier ${n}</div>`}}b+=rw(p,i,m)});
+ h+=b||'<div class="empty">No players found.</div>';
+ if(isM())h+=`<div class="row" style="margin-top:16px"><button class="btn p" onclick="addP()">+ Add players</button><button class="btn" onclick="newMode()">+ Add gamemode</button></div>`;
+ h+=`<div class="panel"><b>Recent updates</b><div class="log">${D.log.slice(0,8).map(e=>{const m=D.modes.find(x=>x.id===e.m)||{name:e.m,icon:''};return `<div><b>${esc(e.n)}</b> · ${ic(m)} ${esc(m.name)}: ${e.a} → ${badge(e.b)} <span class="mute">${new Date(e.d).toLocaleDateString(undefined,{month:'short',day:'numeric'})}</span></div>`}).join('')||'<span class="mute">Nothing yet.</span>'}</div></div>`;
+ $('#app').className=fx?'enter':'';$('#app').innerHTML=h;fx=false}
+function applyTitle(){document.title=D.title;$('#logo').innerHTML='<i>🏆</i><span class="lt">'+esc(D.title)+'</span>'}
+function render(){applyTitle();$('#tabs').innerHTML=[{id:'overall',name:'Overall',icon:'🏆'},...D.modes].map(m=>`<button class="tab ${tab===m.id?'on':''}${fx&&tab===m.id?' pop':''}" onclick="go('${m.id}')"><i>${ic(m)}</i>${esc(m.name)}</button>`).join('')+(isM()?'<button class="tab add" title="Add gamemode" onclick="newMode()"><i>＋</i></button>':'');
+ $('#lg').textContent=role?'Sign out':'Manager login';$('#set').hidden=!role;bd()}
+/* modals */
+const closeModal=()=>{const o=document.querySelector('.ov');if(!o)return;curP=null;o.classList.add('out');setTimeout(()=>o.remove(),180)};
+let curP=null;const modal=(h,c='')=>$('#modal').innerHTML=`<div class="ov" onclick="if(event.target===this)closeModal()"><div class="modal ${c}">${h}</div></div>`;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+function info(){modal(`<h3>Tier information</h3><div class="ti">${INFO.map(([t,d])=>`<div>${badge(t)}<b>(${tp(t)} ${tp(t)===1?'pt':'pts'})</b>${d}</div>`).join('')}</div><h3>Overall titles</h3><div class="ti">${RANKS.map(r=>`<div><b style="color:${r[2]}">${r[1]}</b> · ${r[0]}+ points</div>`).join('')}</div><div class="row"><div class="sp"></div><button class="btn p" onclick="closeModal()">Close</button></div>`)}
+function profBody(id){const p=D.players.find(x=>x.id===id);if(!p)return'';const t=pts(p),r=rk(t),pos=sorted().findIndex(x=>x.id===id)+1,M=isM();
+ return `<div class="ban" style="--c:${r.c}">${av(p.name,'pav')}<div class="pi"><h2>${esc(p.name)}</h2><div class="rkt" style="color:${r.c}">${r.t}</div><div class="chips"><span class="chip">Overall #${pos}</span><span class="chip"><b>${t}</b> points</span>${M?`<select onchange="setRegion('${id}',this.value)"><option value="">No region</option>${REG.map(x=>`<option ${p.region===x?'selected':''}>${x}</option>`).join('')}</select>`:rg(p)}</div></div><img class="body" alt="" src="https://mc-heads.net/body/${encodeURIComponent(p.name)}/200" onerror="this.remove()"></div>
+ <div class="pg">${D.modes.map((m,i)=>{const x=tr(p,m.id);return `<div class="mc" style="--c:${TC[x]};--i:${i}"><span class="mi2">${ic(m)}</span><div class="mn">${esc(m.name)}</div>${M?`<select onchange="setTier('${id}','${m.id}',this.value)">${[...TIERS].reverse().map(y=>`<option ${x===y?'selected':''}>${y}</option>`).join('')}</select>`:`<b class="tt">${x}</b>`}<span class="pp">(${tp(x)} ${tp(x)===1?'pt':'pts'})</span></div>`}).join('')}</div>
+ <div class="row">${M?`<button class="btn s" onclick="renameP('${id}')">Rename</button><button class="btn s d" onclick="delP('${id}')">Delete</button>`:''}<div class="sp"></div><button class="btn p" onclick="closeModal()">Done</button></div>`}
+function prof(id){curP=id;modal(profBody(id),'wide')}
+function refProf(){const e=document.querySelector('.modal');if(e&&curP){e.classList.add('noanim');e.innerHTML=profBody(curP)}}
+function setTier(id,k,v){const p=D.players.find(x=>x.id===id),old=tr(p,k);if(old===v)return;p.tiers=p.tiers||{};p.tiers[k]=v;D.log.unshift({d:Date.now(),n:p.name,m:k,a:old,b:v,by:who()});D.log=D.log.slice(0,50);save();refProf()}
+function setRegion(id,v){D.players.find(x=>x.id===id).region=v;save();refProf()}
+function addP(){modal(`<h3>Add players</h3><label>Minecraft usernames (one per line or comma-separated)<textarea id="np" rows="5"></textarea></label><label>Region<select id="nr" style="width:100%"><option value="">No region</option>${REG.map(x=>`<option>${x}</option>`).join('')}</select></label><div class="mute">New players start at LT3 in every gamemode.</div><div class="row"><div class="sp"></div><button class="btn" onclick="closeModal()">Cancel</button><button class="btn p" onclick="doAdd()">Add</button></div>`)}
+function doAdd(){let n=0;const rgn=$('#nr').value;for(const nm of $('#np').value.split(/[,\n]/).map(s=>s.trim()).filter(Boolean)){if(D.players.some(p=>p.name.toLowerCase()===nm.toLowerCase()))continue;D.players.push({id:Math.random().toString(36).slice(2,9),name:nm,tiers:{},region:rgn});n++}closeModal();if(n){save();toast(n+' player(s) added')}else toast('Nothing new to add')}
+function newMode(){dm=[{id:'',name:'',icon:'⭐'}];modal(`<h3>Add a gamemode</h3><div class="mrow"><span class="mic" id="ic0">⭐</span><input id="mn0" placeholder="Gamemode name" onkeydown="if(event.key==='Enter')doNewMode()"><input id="mi0" value="⭐" placeholder="Emoji or image link" oninput="pv(0)"><label class="btn s up">Upload<input type="file" accept="image/*" hidden onchange="upl(0,this)"></label></div><div class="mute">Everyone starts at LT3 in the new gamemode. Type an emoji, paste an image link, or upload an image.</div><div class="row"><div class="sp"></div><button class="btn" onclick="closeModal()">Cancel</button><button class="btn p" onclick="doNewMode()">Add gamemode</button></div>`);$('#mn0').focus()}
+function doNewMode(){const n=$('#mn0').value.trim();if(!n){toast('Enter a name');return}const m={id:'m'+Math.random().toString(36).slice(2,7),name:n,icon:dm[0].icon};D.modes.push(m);tab=m.id;fx=true;closeModal();save();toast(n+' added')}
+function renameP(id){const p=D.players.find(x=>x.id===id),v=prompt('New name',p.name);if(v&&v.trim()){p.name=v.trim();closeModal();save()}}
+function delP(id){const p=D.players.find(x=>x.id===id);if(confirm('Delete '+p.name+' from every gamemode?')){D.players=D.players.filter(x=>x.id!==id);closeModal();save()}}
+function login(){modal(`<h3>Manager login</h3><label>Password<input id="pw" type="password" onkeydown="if(event.key==='Enter')doLogin()"></label><div class="row"><div class="sp"></div><button class="btn" onclick="closeModal()">Cancel</button><button class="btn p" onclick="doLogin()">Sign in</button></div>`);$('#pw').focus()}
+async function doLogin(){if(await sha($('#pw').value)!==D.mgr){toast('Wrong password');return}role='m';sessionStorage[NS+'role']='m';closeModal();render();if(!localStorage[NS+'tk'])toast('Open ⚙ once to add your GitHub token')}
+const mrows=()=>dm.map((m,i)=>`<div class="mrow"><span class="mic" id="ic${i}">${ic(m)}</span><input id="mn${i}" value="${esc(m.name)}" placeholder="Name"><input id="mi${i}" value="${esc(/^data:/.test(m.icon)?'':m.icon)}" placeholder="Emoji or image link" oninput="pv(${i})"><label class="btn s up">Upload<input type="file" accept="image/*" hidden onchange="upl(${i},this)"></label><button class="btn s d" title="Remove gamemode" onclick="delMode(${i})">✕</button></div>`).join('');
+function delMode(i){dm.forEach((m,j)=>{const e=$('#mn'+j);if(e&&e.value.trim())m.name=e.value.trim()});if(confirm('Remove "'+dm[i].name+'"? Its tiers will no longer show.')){dm.splice(i,1);$('#mrows').innerHTML=mrows()}}
+function settings(){dm=D.modes.map(m=>({...m}));modal(`<h3>Settings</h3><b>Customize</b><label>Website title<input id="s_title" value="${esc(D.title)}"></label>
+ <div id="mrows" style="display:grid;gap:8px">${mrows()}</div>
+ <div class="mute">Rename gamemodes, change icons, or remove them. To add one, use the ＋ button next to the tabs.</div>
+ <hr style="width:100%;border:0;border-top:1px solid var(--line)"><b>Publishing</b>
+ <label>GitHub token (needed to publish changes)<input id="s_tk" type="password" value="${esc(localStorage[NS+'tk']||'')}" placeholder="github_pat_…"></label><label>Repository (owner/name)<input id="s_repo" value="${esc(repo())}"></label>
+ <hr style="width:100%;border:0;border-top:1px solid var(--line)"><b>Change password</b><label>Current password<input id="s_cur" type="password"></label><label>New password<input id="s_new" type="password"></label>
+ <div class="row"><button class="btn" onclick="testConn()">Test connection</button><div class="sp"></div><button class="btn" onclick="closeModal()">Cancel</button><button class="btn p" onclick="saveSettings()">Save</button></div>`)}
+function pv(i){const v=$('#mi'+i).value.trim();if(v)dm[i].icon=v;$('#ic'+i).innerHTML=ic(dm[i])}
+function upl(i,el){const f=el.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas');c.width=c.height=64;const k=Math.min(64/im.width,64/im.height),w=im.width*k,h=im.height*k,x=c.getContext('2d');x.imageSmoothingEnabled=k<1;x.drawImage(im,(64-w)/2,(64-h)/2,w,h);dm[i].icon=c.toDataURL('image/png');$('#mi'+i).value='';$('#ic'+i).innerHTML=ic(dm[i])};im.onerror=()=>toast('Could not read that image');im.src=r.result};r.readAsDataURL(f)}
+function keep(){localStorage[NS+'tk']=$('#s_tk').value.trim();localStorage[NS+'repo']=$('#s_repo').value.trim()}
+async function testConn(){keep();toast('Testing connection…');await push()}
+async function saveSettings(){keep();let ch=false;const t=$('#s_title').value.trim()||'PvP Nerd Tiers';
+ dm.forEach((m,i)=>{m.name=$('#mn'+i).value.trim()||m.name});
+ if(t!==D.title||JSON.stringify(dm)!==JSON.stringify(D.modes)){D.title=t;D.modes=dm.map(m=>({...m}));ch=true}
+ const a=$('#s_new').value;
+ if(a){if(await sha($('#s_cur').value)!==D.mgr){toast('Current password is wrong');return}if(a.length<6){toast('New password needs 6+ characters');return}D.mgr=await sha(a);ch=true}
+ closeModal();if(ch){save();toast('Saved')}else toast('Settings saved')}
+$('#lg').onclick=()=>{if(role){role='';sessionStorage[NS+'role']='';render()}else login()};
+render();load().finally(()=>{fx=true;render()});
+setInterval(()=>{if(!role&&!document.hidden&&!document.querySelector('.ov'))load().then(bd)},120000);
+</script></body></html>
