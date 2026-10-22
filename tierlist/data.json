@@ -67,7 +67,9 @@
   {
    "id": "c0z3nbg",
    "name": "Itszrex",
-   "tiers": {},
+   "tiers": {
+    "crystal": "MT2"
+   },
    "region": "NA EAST"
   },
   {
@@ -147,6 +149,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792711162638,
+   "n": "Itszrex",
+   "m": "crystal",
+   "a": "LT3",
+   "b": "MT2",
+   "by": "Manager"
+  },
   {
    "d": 1792643682816,
    "n": "DumbPotatoNerd",
