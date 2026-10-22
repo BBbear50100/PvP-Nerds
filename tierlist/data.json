@@ -87,7 +87,9 @@
   {
    "id": "6fbhgh4",
    "name": "eclipsing1",
-   "tiers": {},
+   "tiers": {
+    "pot": "MT2"
+   },
    "region": ""
   },
   {
@@ -142,6 +144,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792643661082,
+   "n": "eclipsing1",
+   "m": "pot",
+   "a": "LT3",
+   "b": "MT2",
+   "by": "Manager"
+  },
   {
    "d": 1792643649631,
    "n": "kern11",
