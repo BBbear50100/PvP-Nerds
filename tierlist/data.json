@@ -5,42 +5,42 @@
   {
    "id": "crystal",
    "name": "Crystal",
-   "icon": "🔮"
+   "icon": "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/26.3/assets/minecraft/textures/item/end_crystal.png"
   },
   {
    "id": "mace",
    "name": "Mace",
-   "icon": "🔨"
+   "icon": "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/26.3/assets/minecraft/textures/item/mace.png"
   },
   {
    "id": "spear",
    "name": "Spear Mace",
-   "icon": "🔱"
+   "icon": "https://assets.mcasset.cloud/26.3/assets/minecraft/textures/item/diamond_spear.png?height=40"
   },
   {
    "id": "pot",
    "name": "Netherite Pot",
-   "icon": "🧪"
+   "icon": "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/26.3/assets/minecraft/textures/item/netherite_sword.png"
   },
   {
    "id": "dsmp",
    "name": "Diamond SMP",
-   "icon": "💎"
+   "icon": "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/26.3/assets/minecraft/textures/item/diamond_chestplate.png"
   },
   {
    "id": "uhc",
    "name": "UHC",
-   "icon": "❤️"
+   "icon": "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/26.3/assets/minecraft/textures/gui/sprites/hud/heart/full.png"
   },
   {
    "id": "smp",
    "name": "SMP",
-   "icon": "🌍"
+   "icon": "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/26.3/assets/minecraft/textures/item/ender_pearl.png"
   },
   {
    "id": "cart",
    "name": "Cart",
-   "icon": "🚃"
+   "icon": "https://assets.mcasset.cloud/26.3/assets/minecraft/textures/item/tnt_minecart.png?height=40"
   }
  ],
  "players": [],
