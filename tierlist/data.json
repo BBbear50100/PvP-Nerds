@@ -1,0 +1,48 @@
+{
+ "mgr": "045ccce2d15921dcae41ff5acfbce0e097e4642579f570596694b5e5032db250",
+ "title": "PvP Nerd Tiers",
+ "modes": [
+  {
+   "id": "crystal",
+   "name": "Crystal",
+   "icon": "🔮"
+  },
+  {
+   "id": "mace",
+   "name": "Mace",
+   "icon": "🔨"
+  },
+  {
+   "id": "spear",
+   "name": "Spear Mace",
+   "icon": "🔱"
+  },
+  {
+   "id": "pot",
+   "name": "Netherite Pot",
+   "icon": "🧪"
+  },
+  {
+   "id": "dsmp",
+   "name": "Diamond SMP",
+   "icon": "💎"
+  },
+  {
+   "id": "uhc",
+   "name": "UHC",
+   "icon": "❤️"
+  },
+  {
+   "id": "smp",
+   "name": "SMP",
+   "icon": "🌍"
+  },
+  {
+   "id": "cart",
+   "name": "Cart",
+   "icon": "🚃"
+  }
+ ],
+ "players": [],
+ "log": []
+}
