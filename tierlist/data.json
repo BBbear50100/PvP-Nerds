@@ -73,7 +73,9 @@
   {
    "id": "dri31am",
    "name": "kern11",
-   "tiers": {},
+   "tiers": {
+    "dsmp": "HT1"
+   },
    "region": ""
   },
   {
@@ -140,6 +142,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792643649631,
+   "n": "kern11",
+   "m": "dsmp",
+   "a": "LT3",
+   "b": "HT1",
+   "by": "Manager"
+  },
   {
    "d": 1792643641682,
    "n": "BBearMC_",
