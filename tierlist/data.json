@@ -90,7 +90,8 @@
    "id": "6fbhgh4",
    "name": "eclipsing1",
    "tiers": {
-    "pot": "MT2"
+    "pot": "MT2",
+    "crystal": "HT3"
    },
    "region": "NA EAST"
   },
@@ -149,6 +150,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792721171214,
+   "n": "eclipsing1",
+   "m": "crystal",
+   "a": "LT3",
+   "b": "HT3",
+   "by": "Manager"
+  },
   {
    "d": 1792711162638,
    "n": "Itszrex",
