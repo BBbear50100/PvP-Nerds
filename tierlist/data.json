@@ -47,7 +47,9 @@
   {
    "id": "r5ic7tg",
    "name": "bblixible",
-   "tiers": {},
+   "tiers": {
+    "crystal": "MT1"
+   },
    "region": "NA EAST"
   },
   {
@@ -150,6 +152,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792795773914,
+   "n": "bblixible",
+   "m": "crystal",
+   "a": "LT3",
+   "b": "MT1",
+   "by": "Manager"
+  },
   {
    "d": 1792721171214,
    "n": "eclipsing1",
