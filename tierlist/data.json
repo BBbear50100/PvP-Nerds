@@ -64,7 +64,8 @@
    "tiers": {
     "crystal": "HT1",
     "mace": "LT1",
-    "spear": "LT1"
+    "spear": "LT1",
+    "pot": "LT2"
    },
    "region": "NA CENTRAL"
   },
@@ -170,6 +171,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792877410188,
+   "n": "BBearMC_",
+   "m": "pot",
+   "a": "LT3",
+   "b": "LT2",
+   "by": "Manager"
+  },
   {
    "d": 1792875989090,
    "n": "_Rocketravy_",
