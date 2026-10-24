@@ -89,7 +89,8 @@
    "id": "9orfi9z",
    "name": "domdemkingsi",
    "tiers": {
-    "mace": "HT1"
+    "mace": "HT1",
+    "crystal": "HT2"
    },
    "region": "NA EAST"
   },
@@ -166,6 +167,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792859332336,
+   "n": "domdemkingsi",
+   "m": "crystal",
+   "a": "LT3",
+   "b": "HT2",
+   "by": "Manager"
+  },
   {
    "d": 1792815511235,
    "n": "domdemkingsi",
