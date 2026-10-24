@@ -88,7 +88,9 @@
   {
    "id": "9orfi9z",
    "name": "domdemkingsi",
-   "tiers": {},
+   "tiers": {
+    "mace": "LT1"
+   },
    "region": "NA EAST"
   },
   {
@@ -164,6 +166,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792815478897,
+   "n": "domdemkingsi",
+   "m": "mace",
+   "a": "LT3",
+   "b": "LT1",
+   "by": "Manager"
+  },
   {
    "d": 1792815418770,
    "n": "eclipsing1",
