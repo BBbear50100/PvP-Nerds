@@ -155,7 +155,8 @@
    "id": "0a8fkji",
    "name": "_Rocketravy_",
    "tiers": {
-    "spear": "MT1"
+    "spear": "MT1",
+    "crystal": "LT2"
    },
    "region": "NA CENTRAL"
   },
@@ -169,6 +170,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792875989090,
+   "n": "_Rocketravy_",
+   "m": "crystal",
+   "a": "LT3",
+   "b": "LT2",
+   "by": "Manager"
+  },
   {
    "d": 1792875188413,
    "n": "BBearMC_",
