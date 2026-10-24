@@ -70,7 +70,8 @@
    "id": "c0z3nbg",
    "name": "Itszrex",
    "tiers": {
-    "crystal": "MT2"
+    "crystal": "MT2",
+    "mace": "MT2"
    },
    "region": "NA EAST"
   },
@@ -152,6 +153,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792801690620,
+   "n": "Itszrex",
+   "m": "mace",
+   "a": "LT3",
+   "b": "MT2",
+   "by": "Manager"
+  },
   {
    "d": 1792795773914,
    "n": "bblixible",
