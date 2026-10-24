@@ -63,7 +63,7 @@
    "name": "BBearMC_",
    "tiers": {
     "crystal": "HT1",
-    "mace": "HT2"
+    "mace": "LT1"
    },
    "region": "NA CENTRAL"
   },
@@ -166,6 +166,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792815504916,
+   "n": "BBearMC_",
+   "m": "mace",
+   "a": "HT2",
+   "b": "LT1",
+   "by": "Manager"
+  },
   {
    "d": 1792815478897,
    "n": "domdemkingsi",
