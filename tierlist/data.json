@@ -95,7 +95,7 @@
    "id": "6fbhgh4",
    "name": "eclipsing1",
    "tiers": {
-    "pot": "MT2",
+    "pot": "LT1",
     "crystal": "HT3",
     "mace": "MT2"
    },
@@ -164,6 +164,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792815404894,
+   "n": "eclipsing1",
+   "m": "pot",
+   "a": "MT2",
+   "b": "LT1",
+   "by": "Manager"
+  },
   {
    "d": 1792815359818,
    "n": "BBearMC_",
