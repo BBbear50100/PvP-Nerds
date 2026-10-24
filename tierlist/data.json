@@ -81,7 +81,8 @@
    "id": "dri31am",
    "name": "kern11",
    "tiers": {
-    "dsmp": "HT1"
+    "dsmp": "HT1",
+    "crystal": "MT2"
    },
    "region": "EU"
   },
@@ -167,6 +168,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792859949789,
+   "n": "kern11",
+   "m": "crystal",
+   "a": "LT3",
+   "b": "MT2",
+   "by": "Manager"
+  },
   {
    "d": 1792859332336,
    "n": "domdemkingsi",
