@@ -62,7 +62,8 @@
    "id": "0tl91a7",
    "name": "BBearMC_",
    "tiers": {
-    "crystal": "HT1"
+    "crystal": "HT1",
+    "mace": "HT2"
    },
    "region": "NA CENTRAL"
   },
@@ -163,6 +164,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792815359818,
+   "n": "BBearMC_",
+   "m": "mace",
+   "a": "LT3",
+   "b": "HT2",
+   "by": "Manager"
+  },
   {
    "d": 1792815234435,
    "n": "eclipsing1",
