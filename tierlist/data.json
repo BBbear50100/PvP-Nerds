@@ -155,11 +155,21 @@
   {
    "id": "3lwra0t",
    "name": "FuryGaames",
-   "tiers": {},
+   "tiers": {
+    "crystal": "HT3"
+   },
    "region": "ASIA"
   }
  ],
  "log": [
+  {
+   "d": 1792810283476,
+   "n": "FuryGaames",
+   "m": "crystal",
+   "a": "LT3",
+   "b": "HT3",
+   "by": "Manager"
+  },
   {
    "d": 1792809845825,
    "n": "Itszrex",
