@@ -70,7 +70,7 @@
    "id": "c0z3nbg",
    "name": "Itszrex",
    "tiers": {
-    "crystal": "MT2",
+    "crystal": "HT2",
     "mace": "LT3",
     "spear": "HT2"
    },
@@ -162,6 +162,14 @@
   }
  ],
  "log": [
+  {
+   "d": 1792810736209,
+   "n": "Itszrex",
+   "m": "crystal",
+   "a": "MT2",
+   "b": "HT2",
+   "by": "Manager"
+  },
   {
    "d": 1792810283476,
    "n": "FuryGaames",
