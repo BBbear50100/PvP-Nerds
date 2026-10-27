@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PvP Nerd Tiers</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏆</text></svg>">
+<style>
+:root{color-scheme:dark;--bg:#080b14;--pan:#111729;--row:#141b30;--hov:#1b2440;--line:#222c48;--ink:#eef1fb;--mute:#8791b0;--acc:#ffc24a}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(900px 520px at 12% -6%,#1d2a5a77,transparent),radial-gradient(800px 520px at 92% 0,#5a1d6a44,transparent),var(--bg);background-attachment:fixed;color:var(--ink);font:15px/1.45 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+button,input,select,textarea{font:inherit;color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0);z-index:8;background:#080b14b8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{max-width:1280px;margin:auto;padding:12px 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.logo{font-weight:900;font-size:22px;letter-spacing:.06em;cursor:pointer;text-transform:uppercase}.logo i{font-style:normal;margin-right:6px}.lt{background:linear-gradient(90deg,#ffd76a,#ff8a3d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sp{flex:1}
+.btn{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--pan);padding:8px 15px;border-radius:11px;cursor:pointer;font-weight:600;transition:.15s}
+.btn:hover{background:var(--hov);transform:translateY(-1px)}.btn:active{transform:scale(.95)}
+.btn.p{background:linear-gradient(135deg,#ffc24a,#ff8a3d);color:#2a1500;border:0;box-shadow:0 6px 20px #ff8a3d33}.btn.d{color:#ff6b6b}.btn.s{padding:5px 11px;font-size:13px}
+input,select,textarea{background:#0a0f1d;border:1px solid var(--line);border-radius:10px;padding:9px 12px;width:100%;transition:.2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px #ffc24a30}
+#q{max-width:230px}select{width:auto;padding:6px 8px}
+main{max-width:1280px;margin:auto;padding:14px 20px 60px}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:4px 0 22px;padding:4px 2px 8px}
+.tab{flex:1 1 0;min-width:86px;border:0;background:transparent;color:var(--mute);padding:8px 6px 12px;cursor:pointer;display:grid;justify-items:center;gap:6px;font-weight:700;font-size:13px;position:relative;transition:color .25s}
+.tab i{font-style:normal;font-size:34px;height:38px;display:grid;place-items:center;filter:grayscale(.85) brightness(.75);transition:.25s}
+.tab::after{content:'';position:absolute;left:18%;right:18%;bottom:0;height:3px;border-radius:3px;background:linear-gradient(90deg,#ffd76a,#ff8a3d);transform:scaleX(0);transition:.25s}
+.tab:hover{color:var(--ink)}.tab:hover i{filter:none;transform:translateY(-5px) scale(1.22) rotate(-8deg)}.tab.pop i{animation:ipop .6s cubic-bezier(.3,1.6,.5,1)}.tab.on{color:var(--ink)}.tab.on i{filter:drop-shadow(0 0 10px #ffc24a88);transform:translateY(-2px) scale(1.1)}.tab.on::after{transform:scaleX(1)}
+.tab.add{flex:0 0 56px;min-width:56px}.tab.add i{font-size:28px;color:var(--acc);filter:none}
+.top{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:16px}.top h1{margin:0;font-size:28px;letter-spacing:-.01em}.mute{color:var(--mute);font-size:13px}
+.sec{margin:22px 4px 10px;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:12px}.sec::after{content:'';flex:1;height:1px;background:var(--line)}
+.rw{position:relative;display:flex;align-items:center;gap:18px;min-height:96px;margin-bottom:10px;border-radius:18px;background:linear-gradient(90deg,#161d35,#0f1426);border:1px solid var(--line);cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s;--rc:#2c3760;padding-right:18px}
+.rw:hover{transform:translateY(-2px);border-color:#3a4a7c;box-shadow:0 10px 30px #0008;z-index:2}
+.rb{align-self:stretch;flex:0 0 92px;display:grid;place-items:center;font-size:30px;font-weight:900;background:#1b2340;color:#7581a8;border-radius:18px 0 0 18px;clip-path:polygon(0 0,100% 0,74% 100%,0 100%);padding-right:16px}
+.r1{--rc:#ffc93c;border-color:#c9a02e55;box-shadow:0 0 36px #ffc24a14}.r1 .rb{background:linear-gradient(135deg,#ffd45e,#c48a10);color:#3b2700}
+.r2{--rc:#cfdcf0;border-color:#9fb4d044}.r2 .rb{background:linear-gradient(135deg,#dbe6f6,#8fa3bf);color:#1c2a3d}
+.r3{--rc:#f0a063;border-color:#d1814244}.r3 .rb{background:linear-gradient(135deg,#f4aa6e,#b4622a);color:#3a1d08}
+.av,.pav{width:66px;height:66px;border-radius:50%;border:3px solid var(--rc);background:#0009;image-rendering:pixelated;flex:0 0 auto;box-shadow:0 0 18px color-mix(in srgb,var(--rc) 35%,transparent)}
+.nmb{min-width:0;flex:1}.nm{font-size:21px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.sub{font-size:13px;font-weight:700}
+.rgw{flex:0 0 130px;text-align:center}
+.rgb{display:inline-block;padding:4px 13px;border-radius:99px;font-weight:800;font-size:12px;letter-spacing:.06em;background:hsl(var(--h,220) 70% 50%/.16);color:hsl(var(--h,220) 90% 70%);border:1px solid hsl(var(--h,220) 70% 55%/.35)}.rgb.no{opacity:.45}
+.tiles{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.tl{position:relative;width:56px;height:64px;border-radius:12px;background:#0a0f1d;border:1px solid #ffffff12;border-bottom:3px solid var(--c);display:grid;place-content:center;justify-items:center;gap:3px;transition:.2s}
+.tl i{display:inline-block;transition:transform .3s;font-style:normal;font-size:24px;line-height:1}.tl:hover i{transform:translateY(-2px) scale(1.25) rotate(-8deg)}.tl b{font-size:12px;color:var(--c)}
+.tl:hover{transform:translateY(-4px);box-shadow:0 8px 22px color-mix(in srgb,var(--c) 35%,transparent);z-index:9}
+.tl.lg{width:88px;height:78px}.tl.lg i{font-size:32px}.tl.lg b{font-size:16px}
+.tl::after{content:attr(data-tip);position:absolute;bottom:118%;left:50%;transform:translateX(-50%) scale(.92);background:#04060d;border:1px solid var(--line);padding:5px 10px;border-radius:9px;white-space:nowrap;font-size:12px;font-weight:600;color:var(--ink);opacity:0;pointer-events:none;transition:.15s}
+.tl:hover::after{opacity:1;transform:translateX(-50%) scale(1)}
+.bd{font-size:12px;font-weight:800;padding:2px 9px;border-radius:99px;background:color-mix(in srgb,var(--c) 20%,transparent);color:var(--c)}
+.empty{padding:34px;text-align:center;color:var(--mute);background:var(--row);border-radius:16px}
+.panel{background:#111729cc;border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:26px}
+.log{display:grid;gap:6px;margin-top:10px;font-size:14px}.log div{padding:7px 11px;background:var(--row);border-radius:9px}
+.ov{position:fixed;inset:0;background:#03050bcc;backdrop-filter:blur(4px);display:grid;place-items:center;padding:16px;z-index:20;overflow:auto;animation:fin .2s}
+.modal{background:linear-gradient(#131a2f,#0e1324);border:1px solid var(--line);border-radius:22px;padding:22px;width:min(520px,100%);display:grid;gap:14px;animation:zoom .3s cubic-bezier(.2,.8,.2,1);box-shadow:0 30px 80px #000a}.modal.wide{width:min(760px,100%)}
+.ov.out{animation:fout .18s forwards}.ov.out .modal{animation:zout .18s forwards}
+.modal label{font-size:13px;font-weight:600;display:grid;gap:5px}.modal h2,.modal h3{margin:0}
+.ban{position:relative;display:flex;gap:20px;align-items:center;padding:22px;border-radius:18px;overflow:hidden;background:linear-gradient(120deg,color-mix(in srgb,var(--c) 32%,#0b1020),#0b1020 72%);border:1px solid color-mix(in srgb,var(--c) 40%,transparent)}
+.ban::before{content:'';position:absolute;width:260px;height:260px;right:-60px;top:-90px;border-radius:50%;background:radial-gradient(color-mix(in srgb,var(--c) 40%,transparent),transparent 70%)}
+.pav{width:96px;height:96px;--rc:var(--c);animation:pop .5s cubic-bezier(.3,1.5,.5,1)}.pi{position:relative;z-index:1;min-width:0}.pi h2{font-size:30px;overflow-wrap:anywhere}.rkt{font-weight:800;margin:2px 0 8px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.chip{background:#ffffff14;border-radius:99px;padding:4px 12px;font-size:13px}.chip b{color:var(--acc)}
+.body{position:absolute;right:18px;bottom:-30px;height:190px;filter:drop-shadow(0 12px 24px #000a);animation:up .5s .1s backwards}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.mc{display:grid;justify-items:center;gap:4px;padding:14px 8px;border-radius:16px;background:linear-gradient(#171f38,#10162a);border:1px solid #ffffff10;border-bottom:3px solid var(--c);animation:up .4s backwards;animation-delay:calc(var(--i,0)*45ms);transition:.2s}
+.mc:hover{transform:translateY(-3px);box-shadow:0 10px 26px color-mix(in srgb,var(--c) 28%,transparent)}.noanim .mc,.noanim .pav,.noanim .body{animation:none}
+.mi2{font-size:30px;line-height:1}.mn{font-size:13px;color:var(--mute);font-weight:600;text-align:center}.tt{font-size:20px;color:var(--c)}.pp{font-size:12px;color:var(--mute)}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.ti{display:grid;gap:6px;font-size:14px}.ti div{background:var(--row);border-radius:9px;padding:7px 11px}.ti b+b,.ti .bd+b{margin:0 6px}
+.mrow{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.mrow input{flex:1;min-width:110px}.mic{font-size:24px;width:34px;text-align:center}.up{cursor:pointer;display:inline-block}
+.ic{width:1em;height:1em;object-fit:contain;vertical-align:-.12em;image-rendering:pixelated}
+.enter .rw{animation:slideIn .5s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i,0)*35ms + .08s)}.enter .top{animation:slideIn .45s cubic-bezier(.2,.8,.2,1) backwards}.enter .sec{animation:slideIn .5s backwards}.enter .top h1 .ic{display:inline-block;animation:ipop .6s .1s cubic-bezier(.3,1.6,.5,1) backwards}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:30;width:max-content;max-width:92vw}.t{background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:12px;text-align:center;animation:up .3s}
+@keyframes slideIn{from{opacity:0;transform:translateX(calc(var(--dx,1)*46px))}}@keyframes ipop{from{opacity:0;transform:scale(.3) rotate(-35deg)}}
+@keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}@keyframes fin{from{opacity:0}}@keyframes fout{to{opacity:0}}@keyframes pop{from{opacity:0;transform:scale(.4)}}
+@keyframes zoom{from{opacity:0;transform:translateY(14px) scale(.96)}}@keyframes zout{to{opacity:0;transform:scale(.95)}}
+@media (max-width:900px){.rw{flex-wrap:wrap;padding:0 14px 14px 0}.tiles{width:100%;justify-content:flex-start;padding-left:14px}.rgw{display:none}.rb{flex-basis:70px}.body{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+.emb .logo,.emb #lg{display:none}
+html.emb{--bg:#080b14;--card:#111729;--ink:#eef1fb;--mute:#8791b0;--line:#222c48;--shadow:0 8px 30px rgba(0,0,0,.4)}
+html.emb body{background:radial-gradient(900px 520px at 12% -6%,#1d2a5a77,transparent),radial-gradient(800px 520px at 92% 0,#5a1d6a44,transparent),#080b14;background-attachment:fixed}
+
+.qmg{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:10px 0 14px}.qm{border:2px solid var(--line);background:#141b30;border-radius:16px;padding:14px 8px;cursor:pointer;display:grid;justify-items:center;gap:4px;transition:.2s;font-weight:700}.qm i{font-style:normal;font-size:30px}.qm small{color:var(--mute);font-weight:500}.qm:hover{transform:translateY(-3px);border-color:#3a4a7c}.qm.on{border-color:var(--acc);box-shadow:0 0 24px #ffc24a33}
+.qf{display:grid;grid-template-columns:1fr 1fr;gap:10px}.qf label{display:grid;gap:5px}.mt{background:linear-gradient(135deg,#1c2650,#101830);border:2px solid var(--acc);border-radius:22px;padding:26px;text-align:center;animation:pop .6s cubic-bezier(.3,1.5,.5,1);box-shadow:0 0 60px #ffc24a22}
+.vs2{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;margin:16px 0}.vs2 .pav{--rc:var(--acc)}.stp{text-align:left;max-width:540px;margin:12px auto;color:#cdd4ea}.stp li{margin:7px 0}.lab{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--acc)}
+.radar{position:relative;width:120px;height:120px;margin:10px auto}.radar i{position:absolute;inset:0;border-radius:50%;border:2px solid var(--acc);animation:rad 2s infinite}.radar i:nth-child(2){animation-delay:.66s}.radar i:nth-child(3){animation-delay:1.33s}@keyframes rad{from{transform:scale(.2);opacity:.9}to{transform:scale(1);opacity:0}}
+.eln{font-weight:900;font-size:22px;color:var(--c,var(--acc));min-width:88px;text-align:right;font-variant-numeric:tabular-nums}.lgr{display:flex;gap:10px;align-items:center;padding:8px 12px;background:var(--row);border-radius:10px;margin-top:6px}.lgr input[type=checkbox]{width:20px;min-width:0;flex:0 0 20px;padding:0;height:20px}
+.rgb.no{opacity:.45}.emb #lg{display:none}
+.lh{display:flex;gap:18px;padding:0 18px 0 0;margin:6px 0 10px;color:var(--mute);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.lh .h1{flex:0 0 92px;text-align:center}.lh .h2{flex:1;padding-left:84px}.lh .h3{flex:0 0 130px;text-align:center}.lh .h4{flex:0 0 110px;text-align:center}.lh .h5{flex:0 0 88px;text-align:right}.lh .h6{flex:0 0 var(--tw);text-align:center}
+.rw .wrw{flex:0 0 110px;text-align:center;display:grid;line-height:1.2}.wrw b{font-size:19px}.wrw small{color:var(--mute);font-size:11px}.nd{color:var(--mute);font-size:12px;font-style:italic}.rw .eln{flex:0 0 88px;min-width:0}.rw .tiles{flex:0 0 var(--tw,auto)}
+.ban{min-height:180px}.ban::after{content:'';position:absolute;right:44px;bottom:8px;width:130px;height:20px;border-radius:50%;background:radial-gradient(#000b,transparent 70%);z-index:0}
+.body{height:230px!important;width:auto!important;bottom:-10px!important;right:22px!important;z-index:1;filter:drop-shadow(0 10px 18px #000a)}input[type=color]{width:64px;min-width:0;height:38px;padding:3px;cursor:pointer}
+@media (max-width:900px){.lh{display:none}.rw .tiles{flex:1 1 100%}.rw .wrw{flex:0 0 auto}}
+</style><script src="../px.js"></script></head><body>
+<header><div class="bar"><div class="logo" id="logo" onclick="go('overall')"></div><div class="sp"></div>
+<input id="q" placeholder="Search player…" oninput="q=this.value;bd()"></div></header>
+<main><nav class="tabs" id="tabs"></nav><div id="app"><div class="mute" style="padding:40px;text-align:center">Loading…</div></div></main>
+<div id="modal"></div><div id="toast"></div>
+<script>
+const NS=(location.pathname.split('/')[1]||'root')+':';if(top!==self)document.documentElement.classList.add('emb');
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const DEF=[['crystal','Crystal','🔮'],['mace','Mace','🔨'],['spear','Spear Mace','🔱'],['pot','Netherite Pot','🧪'],['dsmp','Diamond SMP','💎'],['uhc','UHC','❤️'],['smp','SMP','🌍'],['cart','Cart','🚃']].map(([id,name,icon])=>({id,name,icon}));
+const hex2hsl=h=>{const n=parseInt(h.slice(1),16),r=(n>>16&255)/255,g=(n>>8&255)/255,b=(n&255)/255,mx=Math.max(r,g,b),mn=Math.min(r,g,b),l=(mx+mn)/2,d=mx-mn;let hh=0,s=0;if(d){s=d/(1-Math.abs(2*l-1));hh=mx===r?((g-b)/d)%6:mx===g?(b-r)/d+2:(r-g)/d+4;hh=(hh*60+360)%360}return [hh,s*100,l*100]};
+const mk=(h,s,l)=>`hsl(${Math.round(h)} ${Math.round(Math.min(100,s))}% ${Math.round(Math.min(90,l))}%)`;
+function buildTC(th){const tc={};[['3','t3'],['2','t2'],['1','t1']].forEach(([n,k])=>{const [h,s,l]=hex2hsl(th[k]);tc['LT'+n]=mk(h,s,l);tc['MT'+n]=mk(h,s,Math.min(l+16,80));tc['HT'+n]=mk(h,s+8,Math.min(l+32,88))});return tc}
+let TH_={t1:'#b8860b',t2:'#2b5fd1',t3:'#c4621a'},TC=buildTC(TH_),ICONS={overall:'🏆',queue:'⚔️'};
+const RC={'Combat Grandmaster':'#ff5d73','Combat Master':'#ffc24a','Combat Ace':'#c084fc','Combat Novice':'#6fb3ff','Combat Trainee':'#5eed95','Combat Rookie':'#b9c2da'};
+const REG=['NA WEST','NA EAST','NA CENTRAL','EU','ASIA'],HUE=[350,205,160,45,285],IGN=/^[A-Za-z0-9_]{3,16}$/;
+let F,MODES=DEF,P=[],QL=[],MP=[],PR=[],LOG=[],tab='overall',q='',fx=true,adm=false,qm=null,unsub=null,AC,_gm=[],SKV=null;
+const f2=n=>(+n).toFixed(2),isM=()=>adm&&top!==self&&sessionStorage[NS+'sm']==='1';
+const E=(p,m)=>p.elo&&p.elo[m]!=null?p.elo[m]:10,ovr=p=>MODES.reduce((s,m)=>s+E(p,m.id),0)/2,tn=t=>+t[2];
+const rk=p=>{const n=F.rankOf(ovr(p));return {t:n,c:RC[n]}},sorted=()=>[...P].sort((a,b)=>ovr(b)-ovr(a)||a.name.localeCompare(b.name));
+const ic=m=>/^(data:|https?:)/.test(m.icon)?`<img class="ic" src="${esc(m.icon)}" alt="">`:esc(m.icon);
+const av=(n,c='')=>`<img class="${c}" loading="lazy" alt="" src="https://mc-heads.net/avatar/${encodeURIComponent(n)}/96" onerror="this.style.visibility='hidden'">`;
+const rg=p=>`<span class="rgb${p.region?'':' no'}" style="--h:${HUE[REG.indexOf(p.region)]??220}">${esc(p.region||'—')}</span>`;
+let tt;function toast(m,ms=3500){$('#toast').innerHTML='<div class="t">'+esc(m)+'</div>';clearTimeout(tt);tt=setTimeout(()=>$('#toast').innerHTML='',ms)}
+const closeModal=()=>{if(SKV){try{SKV.dispose()}catch(e){}SKV=null}const o=document.querySelector('.ov');if(o){o.classList.add('out');setTimeout(()=>o.remove(),180)}};
+const modal=(h,c='')=>$('#modal').innerHTML=`<div class="ov" onclick="if(event.target===this)closeModal()"><div class="modal ${c}">${h}</div></div>`;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+/* sound: anvil dropped from a height */
+const unlock=()=>{try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();AC.resume()}catch(e){}};
+function anvil(){try{unlock();const t=AC.currentTime,h=t+.7,o=AC.createOscillator(),g=AC.createGain();o.frequency.setValueAtTime(1500,t);o.frequency.exponentialRampToValueAtTime(240,h);g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(.1,h-.05);g.gain.exponentialRampToValueAtTime(.0001,h);o.connect(g).connect(AC.destination);o.start(t);o.stop(h);
+ [[330,.5],[882,.35],[1456,.3],[2310,.22],[3180,.15]].forEach(([fr,v],i)=>{const o2=AC.createOscillator(),g2=AC.createGain();o2.type=i%2?'triangle':'sine';o2.frequency.value=fr;g2.gain.setValueAtTime(v*.5,h);g2.gain.exponentialRampToValueAtTime(.0001,h+1.7-i*.25);o2.connect(g2).connect(AC.destination);o2.start(h);o2.stop(h+1.8)});
+ const b=AC.createBuffer(1,AC.sampleRate*.09,AC.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);const s=AC.createBufferSource(),gn=AC.createGain();s.buffer=b;gn.gain.value=.6;s.connect(gn).connect(AC.destination);s.start(h)}catch(e){}}
+/* views */
+function go(t){const ids=['overall',...MODES.map(m=>m.id)];$('#app').style.setProperty('--dx',ids.indexOf(t)>=ids.indexOf(tab)?1:-1);tab=t;fx=true;render();scrollTo({top:0})}
+const tile=(p,m,lg)=>{const e=E(p,m.id),t=F.tierOf(e);return `<div class="tl${lg?' lg':''}" style="--c:${TC[t]}" data-tip="${esc(m.name)}: ${t} · ${f2(e)} ELO"><i>${ic(m)}</i><b>${t}</b></div>`};
+const WL=(p,m)=>{const r=p.rec||{},x=m?[r[m]||{}]:Object.values(r);return {w:x.reduce((s,y)=>s+(y.w||0),0),l:x.reduce((s,y)=>s+(y.l||0),0)}};
+const wr=(p,m)=>{const {w,l}=WL(p,m),t=w+l;return t?`<b>${Math.round(w/t*100)}%</b><small>${w}W · ${l}L</small>`:'<span class="nd">No data yet</span>'};
+const wrt=(p,m)=>{const {w,l}=WL(p,m),t=w+l;return t?`${Math.round(w/t*100)}% (${w}W–${l}L)`:'No ELO tests yet'};
+function rw(p,i,m){const r=rk(p),e=m?E(p,m.id):0,t=m?F.tierOf(e):'';return `<div class="rw r${i+1}" style="--i:${Math.min(i,24)};--tw:${m?88:MODES.length*63}px" onclick="prof('${p.id}')"><div class="rb">${i+1}</div>${av(p.name,'av')}<div class="nmb"><div class="nm">${esc(p.name)}</div><div class="sub" style="color:${r.c}">${r.t}</div></div><div class="rgw">${rg(p)}</div><div class="wrw">${wr(p,m&&m.id)}</div><span class="eln" style="--c:${m?TC[t]:'var(--acc)'}">${f2(m?e:ovr(p))}</span><div class="tiles">${m?tile(p,m,1):MODES.map(x=>tile(p,x)).join('')}</div></div>`}
+const lh=m=>`<div class="lh" style="--tw:${m?88:MODES.length*63}px"><span class="h1">Rank</span><span class="h2">Player</span><span class="h3">Region</span><span class="h4">Win Rate</span><span class="h5">ELO</span><span class="h6">${m?'Tier':'Contributing Kits'}</span></div>`;
+const head=(t,s)=>`<div class="top"><div><h1>${t}</h1><div class="mute">${s}</div></div><div class="sp"></div><button class="btn s" onclick="info()">ⓘ How ELO works</button></div>`;
+function queueView(){const me=localStorage[NS+'ign']||'',mp=MP[0],mq=QL.find(x=>me&&x.name.toLowerCase()===me.toLowerCase());
+ let h=head(ic({icon:ICONS.queue})+' ELO Test Queue','Get matched with another player and duel for ELO.');
+ if(mp){const o=mp.a.name.toLowerCase()===me.toLowerCase()?mp.b:mp.a,m=MODES.find(x=>x.id===mp.mode)||{name:mp.mode,icon:''};
+  h+=`<div class="mt"><div class="lab">Match found</div><h2 style="margin:4px 0">${ic(m)} ${esc(m.name)} ELO test</h2><div class="vs2">${av(o.name,'pav')}<div style="text-align:left"><div class="mute">Your opponent</div><div style="font-size:30px;font-weight:900">${esc(o.name)}</div></div></div><ol class="stp"><li>Find <b>${esc(o.name)}</b> in game and play your duel.</li><li><b>Both players</b> must record the fight.</li><li>Send the recordings in <b>#Fight-Proof</b>.</li><li>Once an admin validates it, your ELO updates automatically.</li></ol></div>`}
+ else if(mq){const m=MODES.find(x=>x.id===mq.mode)||{name:mq.mode};h+=`<div class="mt"><div class="radar"><i></i><i></i><i></i></div><h2 style="margin:0">Searching for a ${esc(m.name)} opponent…</h2><p class="mute">Keep this page open. You’ll hear an anvil drop when you’re matched.</p><button class="btn d" onclick="F.leaveQueue('${esc(me)}')">Leave queue</button></div>`}
+ else h+=`<div class="panel"><label class="mute">Minecraft IGN<input id="qi" maxlength="16" value="${esc(me)}" placeholder="Your IGN" style="max-width:360px"></label><div class="mute" style="margin-top:12px">Choose a gamemode</div><div class="qmg">${MODES.map(m=>`<div class="qm ${qm===m.id?'on':''}" onclick="qm='${m.id}';bd()"><i>${ic(m)}</i>${esc(m.name)}<small>${QL.filter(x=>x.mode===m.id).length} waiting</small></div>`).join('')}</div><div class="row"><button class="btn p" onclick="joinQ()">Join queue</button><button class="btn s" onclick="anvil()">🔊 Test sound</button></div><div class="mute" style="margin-top:10px">Your opponent only sees your IGN. You can duel the same player in the same gamemode up to 10 times every 12 hours.</div></div>`;
+ return h}
+function mgrView(){const lg=d=>LOG.filter(x=>!!x.done===d).map(x=>`<label class="lgr"><input type="checkbox" ${d?'checked':''} onchange="F.setDone('${x.id}',this.checked)"><span style="flex:1"><b>${esc(x.name)}</b> · ${x.type==='rank'?'Overall rank':esc((MODES.find(m=>m.id===x.mode)||{name:x.mode}).name)}: ${esc(x.from)} → <b>${esc(x.to)}</b></span><span class="mute">${new Date(x.ts).toLocaleString(undefined,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</span></label>`).join('')||'<div class="mute">Nothing here.</div>';
+ const pr=PR.map(x=>{const m=MODES.find(y=>y.id===x.mode)||{name:x.mode,icon:''};return `<div class="lgr" style="flex-wrap:wrap"><span>${ic(m)} <b>${esc(m.name)}</b></span><span style="flex:1;min-width:140px"><b>${esc(x.a.name)}</b> <span class="mute">vs</span> <b>${esc(x.b.name)}</b></span><button class="btn s p" onclick="rec('${x.id}',1)">${esc(x.a.name)} won</button><button class="btn s p" onclick="rec('${x.id}',0)">${esc(x.b.name)} won</button><button class="btn s d" onclick="F.delPair('${x.id}')">Cancel</button></div>`}).join('')||'<div class="mute">No matched tests waiting.</div>';
+ return `<div class="top"><div><h1>🔒 Manager</h1><div class="mute">Only visible while you’re signed in.</div></div><div class="sp"></div><button class="btn s" onclick="gm()">Edit gamemodes</button></div>
+ <div class="panel"><h3 style="margin:0 0 8px">Matched ELO tests · validate the winner</h3>${pr}</div>
+ <div class="panel"><h3 style="margin:0 0 8px">Record a result manually</h3><div class="row"><select id="mm">${MODES.map(m=>`<option value="${m.id}">${esc(m.name)}</option>`).join('')}</select><input id="ma" list="pl" placeholder="Player A" style="flex:1;min-width:130px"><input id="mb" list="pl" placeholder="Player B" style="flex:1;min-width:130px"><select id="mw"><option value="a">A won</option><option value="b">B won</option></select><button class="btn p" onclick="recM()">Record</button></div><datalist id="pl">${P.map(p=>`<option value="${esc(p.name)}">`).join('')}</datalist></div>
+ <div class="panel"><h3 style="margin:0 0 8px">Appearance</h3><div class="row"><label class="mute">Tier 1 color<input type="color" id="c1" value="${TH_.t1}" oninput="prevLook()"></label><label class="mute">Tier 2 color<input type="color" id="c2" value="${TH_.t2}" oninput="prevLook()"></label><label class="mute">Tier 3 color<input type="color" id="c3" value="${TH_.t3}" oninput="prevLook()"></label><label class="mute">Overall icon<input id="io" value="${esc(ICONS.overall)}" style="width:90px"></label><label class="mute">ELO Test icon<input id="iq" value="${esc(ICONS.queue)}" style="width:90px"></label><button class="btn p" onclick="saveLook()">Save</button></div><div class="mute" style="margin-top:8px">Each color sets LT; MT and HT are brighter shades of it.</div><div id="lkp" style="margin-top:10px;line-height:2.3"></div></div>
+ <div class="panel"><h3 style="margin:0 0 8px">To update on Discord (${LOG.filter(x=>!x.done).length})</h3>${lg(false)}</div><div class="panel"><h3 style="margin:0 0 8px">Already updated on Discord</h3>${lg(true)}</div>`}
+function bd(){const f=q.trim().toLowerCase(),m=MODES.find(x=>x.id===tab),ok=p=>!f||p.name.toLowerCase().includes(f);let h='';
+ if(tab==='queue')h=queueView();else if(tab==='mgr'&&isM())h=mgrView();
+ else if(m){const l=[...P].sort((a,b)=>E(b,m.id)-E(a,m.id)||a.name.localeCompare(b.name));h=head(`${ic(m)} ${esc(m.name)} Tier List`,`${l.length} players · ranked by ELO`)+lh(m);let last=0,b='';l.forEach((p,i)=>{if(!ok(p))return;const n=tn(F.tierOf(E(p,m.id)));if(n!==last){last=n;b+=`<div class="sec">Tier ${n}</div>`}b+=rw(p,i,m)});h+=b||'<div class="empty">No players yet. Queue for an ELO test to get on the list!</div>'}
+ else{const l=sorted();h=head(ic({icon:ICONS.overall})+' Overall Rankings','Overall ELO = total ELO across all gamemodes ÷ 2')+lh();h+=l.map((p,i)=>ok(p)?rw(p,i):'').join('')||'<div class="empty">No players yet. Queue for an ELO test to get on the list!</div>'}
+ $('#app').className=fx?'enter':'';$('#app').innerHTML=h;fx=false;if($('#lkp'))prevLook()}
+function live(){if(tab==='queue'||tab==='mgr'){const a=document.activeElement;if(a&&/INPUT|SELECT/.test(a.tagName)&&$('#app').contains(a))return}bd()}
+function render(){$('#logo').innerHTML='<i>🏆</i><span class="lt">PvP Nerd Tiers</span>';
+ $('#tabs').innerHTML=[{id:'overall',name:'Overall',icon:ICONS.overall},...MODES,{id:'queue',name:'ELO Test',icon:ICONS.queue},...(isM()?[{id:'mgr',name:'Manager',icon:'🔒'}]:[])].map(m=>`<button class="tab ${tab===m.id?'on':''}${fx&&tab===m.id?' pop':''}" onclick="go('${m.id}')"><i>${ic(m)}</i>${esc(m.name)}</button>`).join('');bd()}
+/* profile + info */
+function prof(id){const p=P.find(x=>x.id===id);if(!p)return;const r=rk(p),pos=sorted().findIndex(x=>x.id===id)+1;
+ modal(`<div class="ban" style="--c:${r.c}">${av(p.name,'pav')}<div class="pi"><h2>${esc(p.name)}</h2><div class="rkt" style="color:${r.c}">${r.t}</div><div class="chips"><span class="chip">Overall #${pos}</span><span class="chip"><b>${f2(ovr(p))}</b> overall ELO</span><span class="chip">Win rate <b>${wrt(p)}</b></span>${isM()?`<select onchange="F.setRegion('${id}',this.value)"><option value="">No region</option>${REG.map(x=>`<option ${p.region===x?'selected':''}>${x}</option>`).join('')}</select>`:rg(p)}</div></div><canvas class="body" id="sk" width="340" height="460"></canvas></div>
+ <div class="pg">${MODES.map((m,i)=>{const e=E(p,m.id),t=F.tierOf(e);return `<div class="mc" style="--c:${TC[t]};--i:${i}"><span class="mi2">${ic(m)}</span><div class="mn">${esc(m.name)}</div><b class="tt">${t}</b><span class="pp">${f2(e)} ELO</span><span class="pp">${WL(p,m.id).w+WL(p,m.id).l?wrt(p,m.id):'No data yet'}</span></div>`}).join('')}</div>
+ <div class="row">${isM()?`<button class="btn s d" onclick="delP('${id}')">Delete player</button>`:''}<div class="sp"></div><button class="btn p" onclick="closeModal()">Done</button></div>`,'wide');skin(p.name)}
+let skv;const loadSkv=()=>skv||(skv=new Promise((ok,no)=>{const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/skinview3d@3.0.1/bundles/skinview3d.bundle.js';s.onload=ok;s.onerror=no;document.head.appendChild(s)}));
+async function skin(n){const fb=()=>{const e=$('#sk');if(e)e.outerHTML=`<img class="body" alt="" src="https://mc-heads.net/body/${encodeURIComponent(n)}/200">`};
+ try{await loadSkv();const c=$('#sk');if(!c)return;const v=new skinview3d.SkinViewer({canvas:c,width:340,height:460});SKV=v;v.animation=null;v.zoom=.8;v.fov=30;v.autoRotate=false;v.controls.enableZoom=false;v.controls.enablePan=false;
+  await v.loadSkin('https://mc-heads.net/skin/'+encodeURIComponent(n));const k=v.playerObject.skin;k.rightArm.rotation.set(-.6,0,.15);k.leftArm.rotation.set(.35,0,-.12);k.rightLeg.rotation.set(.14,0,.05);k.leftLeg.rotation.set(-.14,0,-.05);k.head.rotation.set(0,.2,0);v.playerObject.rotation.y=0}catch(e){fb()}}
+function info(){const row=(a,b,c)=>`<div><b style="color:${c}">${a}</b> · ${b}</div>`;
+ modal(`<h3>How ELO works</h3><div class="ti"><div>Everyone starts at <b>10.00 ELO</b> in every gamemode. Win an ELO test to gain ELO, lose and you drop. Your tier in each gamemode comes from your ELO there.</div></div><h3>Combat ranks · overall ELO</h3><div class="ti">${[['Rookie','0–100'],['Trainee','100–160'],['Novice','160–220'],['Ace','220–280'],['Master','280–400'],['Grandmaster','400+']].map(([n,r])=>row(n,r,RC['Combat '+n])).join('')}</div><h3>Tiers · gamemode ELO</h3><div class="ti">${F.TN.map((t,i)=>row(t,F.TH[i]+(F.TH[i+1]!=null?'–'+F.TH[i+1]:'+'),TC[t])).join('')}</div><h3>ELO tests</h3><div class="ti"><div>Both players must record the fight and send the proof in #Fight-Proof. An admin validates the result. The same two players can duel up to 10 times per gamemode every 12 hours.</div></div><div class="row"><div class="sp"></div><button class="btn p" onclick="closeModal()">Close</button></div>`)}
+/* queue + manager actions */
+function watchMine(){if(unsub)unsub();unsub=null;const me=localStorage[NS+'ign']||'';MP=[];if(!IGN.test(me))return;
+ unsub=F.watchPairs(me,(l,added)=>{MP=l;if(added.some(x=>Date.now()-x.ts<18e4)){anvil();tab='queue';fx=true;render()}else live()})}
+async function joinQ(){const n=$('#qi').value.trim();if(!IGN.test(n))return toast('Enter a valid IGN (3–16 letters, numbers or _)');if(!qm)return toast('Pick a gamemode');
+ localStorage[NS+'ign']=n;unlock();try{const r=await F.joinQueue(n,qm);watchMine();toast(r.matched?'Match found!':r.skipped.length?'Waiting for another opponent (you’ve hit the 12-hour limit with '+r.skipped.join(', ')+' in this gamemode)':'You’re in the queue!',6000)}catch(e){toast('Could not join: '+e.message,6000)}}
+const look=()=>({t1:$('#c1').value,t2:$('#c2').value,t3:$('#c3').value});
+function prevLook(){const tc=buildTC(look());$('#lkp').innerHTML=['1','2','3'].map(n=>['LT','MT','HT'].map(x=>`<span class="bd" style="--c:${tc[x+n]};font-size:14px;padding:4px 14px;margin-right:6px">${x+n}</span>`).join('')).join('<br>')}
+async function saveLook(){TH_=look();TC=buildTC(TH_);ICONS={overall:$('#io').value.trim()||'🏆',queue:$('#iq').value.trim()||'⚔️'};try{await F.saveCfg('look',{theme:TH_,icons:ICONS});render();toast('Appearance saved ✓')}catch(e){toast('Could not save: '+e.message,6000)}}
+const res=(r,a,b)=>`${a} ${f2(r.ea)}→${f2(r.na)} · ${b} ${f2(r.eb)}→${f2(r.nb)}`;
+async function rec(id,aw){const x=PR.find(y=>y.id===id);if(!x)return;try{const r=await F.record(x.mode,x.a.name,x.b.name,aw?x.a.name:x.b.name,MODES.map(m=>m.id),id);toast('Recorded · '+res(r,x.a.name,x.b.name),8000)}catch(e){toast('Could not record: '+e.message,7000)}}
+async function recM(){const a=$('#ma').value.trim(),b=$('#mb').value.trim();if(!IGN.test(a)||!IGN.test(b))return toast('Enter two valid IGNs');try{const r=await F.record($('#mm').value,a,b,$('#mw').value==='a'?a:b,MODES.map(m=>m.id));toast('Recorded · '+res(r,a,b),8000)}catch(e){toast('Could not record: '+e.message,7000)}}
+function delP(id){const p=P.find(x=>x.id===id);if(confirm('Delete '+p.name+' and all their ELO?')){F.delPlayer(id);closeModal()}}
+const gmRows=()=>_gm.map((m,i)=>`<div class="mrow"><input value="${esc(m.name)}" oninput="_gm[${i}].name=this.value"><input value="${esc(m.icon)}" oninput="_gm[${i}].icon=this.value" style="max-width:110px;min-width:80px"><button class="btn s d" onclick="_gm.splice(${i},1);$('#gml').innerHTML=gmRows()">✕</button></div>`).join('');
+function gm(){_gm=MODES.map(m=>({...m}));modal(`<h3>Gamemodes</h3><div id="gml" style="display:grid;gap:8px">${gmRows()}</div><div class="row"><button class="btn s" onclick="_gm.push({id:'m'+Math.random().toString(36).slice(2,6),name:'New gamemode',icon:'⭐'});$('#gml').innerHTML=gmRows()">+ Add gamemode</button></div><div class="mute">Name, then an emoji or image link for the icon.</div><div class="row"><div class="sp"></div><button class="btn" onclick="closeModal()">Cancel</button><button class="btn p" onclick="gmSave()">Save</button></div>`)}
+async function gmSave(){const l=_gm.filter(m=>m.name.trim()).map(m=>({id:m.id,name:m.name.trim(),icon:m.icon.trim()||'⭐'}));if(!l.length)return toast('Keep at least one gamemode');try{await F.saveModes(l);MODES=l;closeModal();render();toast('Gamemodes saved ✓')}catch(e){toast('Could not save: '+e.message,6000)}}
+(async()=>{F=await import('../fb.js');adm=!!(await F.user());try{const l=await F.getModes();if(l&&l.length)MODES=l}catch(e){}try{const lk=await F.getCfg('look');if(lk){TH_={...TH_,...(lk.theme||{})};TC=buildTC(TH_);ICONS={...ICONS,...(lk.icons||{})}}}catch(e){}
+ F.watchPlayers(l=>{P=l;live()});F.watchQueue(l=>{QL=l;live()});watchMine();
+ if(isM()){F.watchPairs('',l=>{PR=l;live()});F.watchLog(l=>{LOG=l;live()})}
+ render()})().catch(e=>{console.error(e);$('#app').innerHTML='<div class="empty">Could not load the tier list.<br><small>'+esc(F&&!F.user?'fb.js on your site is out of date (re-upload it)':(e&&e.message)||e)+'</small></div>'});
+</script></body></html>
