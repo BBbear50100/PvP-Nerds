@@ -40,12 +40,13 @@
      {
       "a": "7dmvqjy",
       "b": "kf1y3ma",
-      "w": null,
+      "w": "kf1y3ma",
       "log": [
        "kf1y3ma",
        "kf1y3ma",
        "kf1y3ma",
        "7dmvqjy",
+       "kf1y3ma",
        "kf1y3ma"
       ]
      },
@@ -66,7 +67,7 @@
     [
      {
       "a": null,
-      "b": null,
+      "b": "kf1y3ma",
       "w": null,
       "log": []
      },
