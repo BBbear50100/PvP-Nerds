@@ -46,12 +46,13 @@
      {
       "a": "fbnylzt",
       "b": "0sw8bgw",
-      "w": null,
+      "w": "0sw8bgw",
       "log": [
        "0sw8bgw",
        "0sw8bgw",
        "0sw8bgw",
        "fbnylzt",
+       "0sw8bgw",
        "0sw8bgw"
       ]
      }
@@ -64,16 +65,16 @@
       "log": []
      },
      {
-      "a": null,
+      "a": "0sw8bgw",
       "b": null,
-      "w": null,
+      "w": "0sw8bgw",
       "log": []
      }
     ],
     [
      {
       "a": null,
-      "b": null,
+      "b": "0sw8bgw",
       "w": null,
       "log": []
      }
